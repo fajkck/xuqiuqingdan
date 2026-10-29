@@ -1,0 +1,956 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>云境全案估算</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="云境估算">
+<meta name="theme-color" content="#1E5662">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAFmUlEQVR4Xu2by3HcMBAFJZfjUBAOxgHo4AgchiJQUI7JB1axWEsCmDeYAT/oPlskl2g2wMX6/eP35xvAET+4LVACOQA5QIdyAOUAHcoBlAN0KAdQDtChHEA5QIdyAOUAHcoBlAN0KAdQDtChHEA5QIdyAOUAHcoBlAN0KAdQDtChHEA5QIdyAOUAHcoBlAN0KAdQDtChHEA5QIdyAOUAHcoBlAN0KAdQDtChHEA5QIdyAOUAHcoBlAN0KAdQDtChHEA5QIdyAOUAHcoBlAN0KAdQDtChHEA5QIdyAOUAHcoBlAN0KAcU+Rlyb/59f6nH+fXnr/onMJj3j9+fvlM6hCiBKNfEI0egFltQ5GoIciQ5sQdLLoJJjmFaEJJL0ZDjFC1Q5CLU5LCb4ZgI7Ad/e/McH/rxl8MhRAmLKIGnAyMeOZLGCUWuhiBHkhN7mpYMu5LJMclxymDUFTnlkmbD9Cp7IihyIlffeKsXojkBQQ9XL8dKxQOmmCRi5HA8wb4RRZGR+OVwCFFCEgU/huGRI1CLLSGKSAeBOoIcSU7sMQ4wCcnGJMcwLdSQ4Ecqpi/Bmhif9S1G4SxHLh3K8rdQwS9H4K3v/6YLPzLwyBGohb0lzZPiRziCHM3hiaJnJYEigZjkGKaFJSTNi8GPKExvKyfiG2nfX8ELd914861hja9IsHD1cqwcjqtvz7Y5McHN5FiIUgQ/LFx9WnnhcFAdUwzzi4WAacV9o3se3/1JmWLCccrhFqKEQxR1iuEVRkWWI1yLLaoi+JGKVY5UJ/ZIlkhTDP2w05bDooU0lpX3Dsvy8xD8yMD09fkhDiFKOF439kh++N6KZ8MjR6AWW3r221YkRdQly2wIciQ5YWnAgvEC+v2wn+vZmOQwjkosPStH/AihvSA9F3f58aPOv++v5jN/dTlKK0dL+fGj+QZQ9+MGcixEJaRyO3omsrsgPTC3kaOkSLONe7Gm3YVR7b+ZHO6ESE+MehNvgeND3U8Od0Km9cP9BdJd5ThMSHOKCfHDsha+Dm4z7vQzwUMcq9Sp/HBMJVtuXI4Vabwdyel5+M4i5JqfIIdjvKNeYa45xYSYcftpZYvaj0A/rqNIlBYLDylHaYqJXaJWvq493Y+Qnz288DQ5HFOMmpyMYegk6ZIeKMcAP+oJGVmRJC2eOa2U5pfmgKn9aPqx0JzXfNSdMJ66uTH7zHIsqOOt/vvSWfYEKhKlxXqRlWt7shyHg9ccJ4cilgGzDEYJ+/Gbn056Zp4vh/rKKt2+LfYhTCLWjAe+yhofvuZ9dPTDPsuE0/w4vt3sKcoRtQSxLzCHVcSihc+Micox3o/UkBid8H3qlYnK4b5Tjr3fFwJD0qmFPX7TleNEP1YcokhC1E8kHWq6cpTuXfOudf42YiT9qVuYVw7HK657ZTeMWIOnliPQD2kuTyLWjNnL4V6C9PxXqwzCtWBaKa4/jBmI/WWNj9RrmH1aKa1PjX4092ab61wfITv1U+/KquR9ZR6oSIgWW6en3pVVebn79nGtD9uK/YCVqh1iPLL9GWBaOcB++/YYFYnFqIW64Ywcx/T40VyIBGLXQjWDV9kanX4sJIVEcsL93R3l0Pywv8VsCVRE1cIRjBXkaBOSkBWHKA4hKqezHw05TERtZY2k/5qRw0r/vR5JSO2QQ+P6igReIXLIBN79WMK335DDydUUybge5PAT/qT6yLsM5Oglb2yaZJ8aOQKI2ik1kvobji3IEcYARQacAjkSqY/fgv07SuPujHRAO5QjBYsiISRpsYAcuSRZkurECnKMIFCRMVpQjnNwiDJSCBakYOKH6V/BlCAHFEEOQA7QoRxAOUCHcgDlAB3KAZQDdCgHUA7QoRxAOUCHcgDlAB3KAZQDdCgHUA7QoRxAOUCHcgDlAB3KAZQDdP4DxNQuJqEiUHEAAAAASUVORK5CYII=">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAFmUlEQVR4Xu2by3HcMBAFJZfjUBAOxgHo4AgchiJQUI7JB1axWEsCmDeYAT/oPlskl2g2wMX6/eP35xvAET+4LVACOQA5QIdyAOUAHcoBlAN0KAdQDtChHEA5QIdyAOUAHcoBlAN0KAdQDtChHEA5QIdyAOUAHcoBlAN0KAdQDtChHEA5QIdyAOUAHcoBlAN0KAdQDtChHEA5QIdyAOUAHcoBlAN0KAdQDtChHEA5QIdyAOUAHcoBlAN0KAdQDtChHEA5QIdyAOUAHcoBlAN0KAdQDtChHEA5QIdyAOUAHcoBlAN0KAcU+Rlyb/59f6nH+fXnr/onMJj3j9+fvlM6hCiBKNfEI0egFltQ5GoIciQ5sQdLLoJJjmFaEJJL0ZDjFC1Q5CLU5LCb4ZgI7Ad/e/McH/rxl8MhRAmLKIGnAyMeOZLGCUWuhiBHkhN7mpYMu5LJMclxymDUFTnlkmbD9Cp7IihyIlffeKsXojkBQQ9XL8dKxQOmmCRi5HA8wb4RRZGR+OVwCFFCEgU/huGRI1CLLSGKSAeBOoIcSU7sMQ4wCcnGJMcwLdSQ4Ecqpi/Bmhif9S1G4SxHLh3K8rdQwS9H4K3v/6YLPzLwyBGohb0lzZPiRziCHM3hiaJnJYEigZjkGKaFJSTNi8GPKExvKyfiG2nfX8ELd914861hja9IsHD1cqwcjqtvz7Y5McHN5FiIUgQ/LFx9WnnhcFAdUwzzi4WAacV9o3se3/1JmWLCccrhFqKEQxR1iuEVRkWWI1yLLaoi+JGKVY5UJ/ZIlkhTDP2w05bDooU0lpX3Dsvy8xD8yMD09fkhDiFKOF439kh++N6KZ8MjR6AWW3r221YkRdQly2wIciQ5YWnAgvEC+v2wn+vZmOQwjkosPStH/AihvSA9F3f58aPOv++v5jN/dTlKK0dL+fGj+QZQ9+MGcixEJaRyO3omsrsgPTC3kaOkSLONe7Gm3YVR7b+ZHO6ESE+MehNvgeND3U8Od0Km9cP9BdJd5ThMSHOKCfHDsha+Dm4z7vQzwUMcq9Sp/HBMJVtuXI4Vabwdyel5+M4i5JqfIIdjvKNeYa45xYSYcftpZYvaj0A/rqNIlBYLDylHaYqJXaJWvq493Y+Qnz288DQ5HFOMmpyMYegk6ZIeKMcAP+oJGVmRJC2eOa2U5pfmgKn9aPqx0JzXfNSdMJ66uTH7zHIsqOOt/vvSWfYEKhKlxXqRlWt7shyHg9ccJ4cilgGzDEYJ+/Gbn056Zp4vh/rKKt2+LfYhTCLWjAe+yhofvuZ9dPTDPsuE0/w4vt3sKcoRtQSxLzCHVcSihc+Micox3o/UkBid8H3qlYnK4b5Tjr3fFwJD0qmFPX7TleNEP1YcokhC1E8kHWq6cpTuXfOudf42YiT9qVuYVw7HK657ZTeMWIOnliPQD2kuTyLWjNnL4V6C9PxXqwzCtWBaKa4/jBmI/WWNj9RrmH1aKa1PjX4092ab61wfITv1U+/KquR9ZR6oSIgWW6en3pVVebn79nGtD9uK/YCVqh1iPLL9GWBaOcB++/YYFYnFqIW64Ywcx/T40VyIBGLXQjWDV9kanX4sJIVEcsL93R3l0Pywv8VsCVRE1cIRjBXkaBOSkBWHKA4hKqezHw05TERtZY2k/5qRw0r/vR5JSO2QQ+P6igReIXLIBN79WMK335DDydUUybge5PAT/qT6yLsM5Oglb2yaZJ8aOQKI2ik1kvobji3IEcYARQacAjkSqY/fgv07SuPujHRAO5QjBYsiISRpsYAcuSRZkurECnKMIFCRMVpQjnNwiDJSCBakYOKH6V/BlCAHFEEOQA7QoRxAOUCHcgDlAB3KAZQDdCgHUA7QoRxAOUCHcgDlAB3KAZQDdCgHUA7QoRxAOUCHcgDlAB3KAZQDdP4DxNQuJqEiUHEAAAAASUVORK5CYII=">
+<style>
+/* Layout: 左侧逐步点选（房屋 → 工艺 → 主材设备），右侧常驻估算面板；手机端估算面板落到底部并有底栏总价 */
+:root{
+  --bg:#ECEEEC; --surface:#F8F9F7; --surface-2:#E2E6E3; --ink:#172022; --muted:#5B676A; --line:#CBD2CF;
+  --accent:#1E5662; --accent-soft:#D6E5E6; --sel:#EEF4F4;
+  --t1:#6F7B7D; --t2:#1E5662; --t3:#8E6A33; --t4:#4A3352;
+  --warn:#9A5B12;
+  --wall:#DCD6CB; --slab:#B9B3A8; --steel:#9EA9AE; --pe:#3E7BC4; --ppr:#86B38F; --pvc:#EDEDE8; --gi:#7E888D; --board:#F4F2EC; --glow:#E9B949; --paintw:#F2F0EA; --paintc:#C7B49B; --stip:#A39A8C; --tilec:#E8E3D8; --coat:#3E7BC4;
+  --f-display:"Noto Serif SC","Songti SC","STSong",serif;
+  --f-body:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --r:10px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#101618; --surface:#172023; --surface-2:#202A2D; --ink:#E6ECEA; --muted:#93A1A3; --line:#2C383B;
+  --accent:#72B6C2; --accent-soft:#1D3A40; --sel:#18292D;
+  --t1:#8F9B9D; --t2:#72B6C2; --t3:#CFA162; --t4:#BFA2CB; --warn:#E0A55A; --wall:#2E3638; --slab:#4A5355; --steel:#7F8B90; --pe:#5B95DA; --ppr:#5F8F69; --pvc:#C9CFCC; --gi:#69757A; --board:#D9DCD6; --glow:#E9B949; --paintw:#DCD9D2; --paintc:#A8957C; --stip:#7C7468; --tilec:#C9C3B6; --coat:#6AA3E6; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#101618; --surface:#172023; --surface-2:#202A2D; --ink:#E6ECEA; --muted:#93A1A3; --line:#2C383B;
+  --accent:#72B6C2; --accent-soft:#1D3A40; --sel:#18292D;
+  --t1:#8F9B9D; --t2:#72B6C2; --t3:#CFA162; --t4:#BFA2CB; --warn:#E0A55A; --wall:#2E3638; --slab:#4A5355; --steel:#7F8B90; --pe:#5B95DA; --ppr:#5F8F69; --pvc:#C9CFCC; --gi:#69757A; --board:#D9DCD6; --glow:#E9B949; --paintw:#DCD9D2; --paintc:#A8957C; --stip:#7C7468; --tilec:#C9C3B6; --coat:#6AA3E6; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.6}
+button{font:inherit;color:inherit}
+.num{font-variant-numeric:tabular-nums}
+
+.top{padding-block:28px 22px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.top-in{max-width:1240px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px 24px;align-items:flex-end;justify-content:space-between;position:relative;z-index:1}
+.brand small{display:block;letter-spacing:.18em;color:var(--muted);font-size:12px}
+.brand h1{font-family:var(--f-display);font-weight:700;font-size:clamp(26px,4vw,36px);margin:4px 0 2px;letter-spacing:.04em;text-wrap:balance}
+.brand p{margin:0;color:var(--muted);max-width:56ch}
+.flow{position:absolute;top:0;right:0;width:55%;height:100%;pointer-events:none;opacity:.45}
+@media (max-width:700px){.flow{display:none}}
+.flow path{fill:none;stroke:var(--accent);stroke-width:1}
+
+.seg{display:inline-flex;background:var(--surface-2);border-radius:999px;padding:3px}
+.seg button{border:0;background:transparent;padding:7px 16px;border-radius:999px;cursor:pointer;font-size:14px;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.12);font-weight:500}
+
+.layout{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:32px;padding-block:28px 120px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media (max-width:960px){.layout{grid-template-columns:minmax(0,1fr)}}
+
+section.step{margin-bottom:40px}
+.step-h{display:flex;align-items:baseline;gap:12px;margin-bottom:6px}
+.step-h .idx{font-family:var(--f-display);color:var(--accent);font-size:15px}
+.step-h h2{font-family:var(--f-display);font-size:22px;margin:0;font-weight:700}
+.step-lead{color:var(--muted);margin:0 0 18px;max-width:62ch}
+
+.item{border-top:1px solid var(--line);padding-block:20px}
+.item-h{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px}
+.ico{width:36px;height:36px;flex:none;border-radius:8px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center}
+.ico svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.item-h h3{margin:0;font-size:17px;font-weight:700}
+.item-h p{margin:2px 0 0;color:var(--muted);font-size:14px;max-width:64ch}
+.item-sub{margin-left:auto;text-align:right;font-size:13px;color:var(--muted);white-space:nowrap}
+.item-sub b{display:block;color:var(--ink);font-size:16px}
+
+.opts{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.opt{text-align:left;border:1px solid var(--line);background:var(--surface);border-radius:var(--r);padding:12px 14px 12px;cursor:pointer;display:flex;flex-direction:column;gap:6px;transition:border-color .15s, background .15s;min-width:0}
+.opt:hover{border-color:var(--accent)}
+.opt:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.opt[aria-pressed="true"]{border-color:var(--accent);background:var(--sel);box-shadow:inset 0 0 0 1px var(--accent)}
+.opt .row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.opt .name{font-weight:700;font-size:15px;line-height:1.35}
+.opt .brands{font-size:13px;color:var(--muted)}
+.opt .desc{font-size:13px;line-height:1.55}
+.opt .price{margin-top:auto;padding-top:6px;border-top:1px dashed var(--line);display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:13px;color:var(--muted)}
+.opt .price b{font-size:16px;color:var(--ink)}
+.opt .talk{display:none;font-size:12.5px;background:var(--surface-2);border-radius:6px;padding:6px 8px;color:var(--ink)}
+.opt .talk::before{content:"顾问话术 · ";color:var(--accent);font-weight:700}
+body.advisor .opt .talk{display:block}
+.opt .img{border-radius:6px;aspect-ratio:16/9;object-fit:cover;max-width:100%}
+
+
+.dg{display:block;width:100%;height:auto;max-width:100%;background:var(--surface-2);border-radius:6px}
+.dg .t{font-size:8.5px;fill:var(--muted)} .dg .tb{font-size:9.5px;fill:var(--ink);font-weight:700}
+.dg .m-wall{fill:var(--wall)} .dg .m-slab{fill:var(--slab)} .dg .m-void{fill:var(--wall)}
+.dg .m-steel{fill:var(--steel)} .dg .m-pe{fill:var(--pe)} .dg .m-ppr{fill:var(--ppr)} .dg .m-pvc{fill:var(--pvc);stroke:var(--slab)} .dg .m-gi{fill:var(--gi)}
+.dg .m-board{fill:var(--board);stroke:var(--ink);stroke-width:.8}
+.dg .m-line{fill:none;stroke:var(--ink);stroke-width:1}
+.dg .glow{stroke:var(--glow);stroke-width:3;stroke-linecap:round;filter:drop-shadow(0 0 3px var(--glow))}
+.dg .gap{stroke:var(--ink);stroke-width:2.2}
+.dg .dim{stroke:var(--muted);stroke-width:.8;stroke-dasharray:2 2}
+.dg .w-l{fill:#C0392B} .dg .w-n{fill:#2E6DB4} .dg .w-e{fill:#C9B227}
+.dg .m-paintw{fill:var(--paintw)} .dg .m-paintc{fill:var(--paintc)} .dg .m-stip{fill:var(--stip)}
+.dg .rake0{stop-color:#fff;stop-opacity:.35} .dg .rake1{stop-color:#000;stop-opacity:.18}
+.dg .ray{stroke:var(--glow);stroke-width:1.4}
+.dg .coat{fill:none;stroke:var(--coat);stroke-width:2.4}
+.dg .m-tile{fill:var(--tilec)} .dg .grout{stroke:var(--slab);stroke-width:.8}
+.partner{font-size:11px;color:var(--accent);background:var(--accent-soft);border-radius:4px;padding:1px 6px;align-self:flex-start}
+.opt .pos{font-size:12.5px;color:var(--muted);font-style:normal}
+.diff{margin:6px 0 0;font-size:13.5px;color:var(--ink)}
+.diff b{color:var(--accent);font-weight:700}
+.opts.mats{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+.tier{font-size:11.5px;letter-spacing:.08em;padding:1px 8px;border-radius:999px;border:1px solid currentColor;white-space:nowrap;flex:none}
+.tier.t0{color:var(--muted)}
+.tier.t1{color:var(--t1)} .tier.t2{color:var(--t2)} .tier.t3{color:var(--t3)} .tier.t4{color:var(--t4)}
+.est{font-size:11px;color:var(--warn);border:1px dashed currentColor;border-radius:4px;padding:0 5px;margin-left:6px;white-space:nowrap}
+
+.ladder{display:flex;flex-wrap:wrap;gap:8px 18px;margin:0 0 20px;font-size:13px;color:var(--muted)}
+.ladder span{display:inline-flex;gap:6px;align-items:center}
+
+/* 房屋信息 */
+.house{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px 24px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.field label,.field .lab{display:block;font-size:13px;color:var(--muted);margin-bottom:6px;letter-spacing:.04em}
+.area-row{display:flex;align-items:baseline;gap:8px}
+.area-row input[type=number]{width:110px;font:700 26px/1 var(--f-display);border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--ink);padding:2px 0}
+.area-row input:focus{outline:none;border-color:var(--accent)}
+input[type=range]{width:100%;accent-color:var(--accent);margin-top:10px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--line);background:transparent;border-radius:999px;padding:5px 14px;cursor:pointer;font-size:14px}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.stepper{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px}
+.stepper button{border:0;background:transparent;width:34px;height:32px;cursor:pointer;font-size:18px}
+.stepper output{min-width:28px;text-align:center;font-weight:700}
+
+details.fixed{margin-top:4px;border:1px solid var(--line);border-radius:var(--r);background:var(--surface)}
+details.fixed summary{cursor:pointer;padding:12px 14px;font-weight:500}
+details.fixed .tbl-wrap{overflow-x:auto;padding:0 14px 12px}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
+td.r,th.r{text-align:right}
+th{color:var(--muted);font-weight:500;font-size:12.5px}
+
+/* 估算面板 */
+aside .panel{position:sticky;top:calc(env(safe-area-inset-top,0px) + 16px);background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:16px}
+.p-lab{font-size:12.5px;color:var(--muted);letter-spacing:.08em}
+.big{font-family:var(--f-display);font-size:34px;font-weight:700;line-height:1.15}
+.big small{font-size:16px;font-weight:500;color:var(--muted)}
+.kv{display:grid;grid-template-columns:1fr auto;gap:6px 12px;font-size:14px}
+.kv .k{color:var(--muted)} .kv .v{text-align:right;font-weight:500}
+.kv .tot{border-top:1px solid var(--line);padding-top:6px;font-weight:700;color:var(--ink)}
+.bars{display:flex;flex-direction:column;gap:7px}
+.bar{display:grid;grid-template-columns:5.5em minmax(0,1fr) 4.6em;gap:8px;align-items:center;font-size:13px}
+.bar .track{height:7px;background:var(--surface-2);border-radius:4px;overflow:hidden}
+.bar .fill{height:100%;background:var(--accent);border-radius:4px}
+.bar .v{text-align:right;color:var(--muted)}
+.meter{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:6px}
+.meter div{height:6px;border-radius:3px;background:var(--surface-2)}
+.meter div.on.t1{background:var(--t1)} .meter div.on.t2{background:var(--t2)} .meter div.on.t3{background:var(--t3)} .meter div.on.t4{background:var(--t4)}
+.meter-l{display:grid;grid-template-columns:repeat(4,1fr);font-size:11.5px;color:var(--muted);margin-top:3px}
+.btn{border:1px solid var(--accent);background:var(--accent);color:var(--surface);border-radius:8px;padding:9px 14px;cursor:pointer;font-weight:500}
+.btn.ghost{background:transparent;color:var(--accent)}
+.note{font-size:12.5px;color:var(--muted);margin:0}
+.verdict{border-radius:10px;padding:12px 14px;background:var(--surface-2)}
+.verdict h4{margin:0 0 4px;font-size:15px}
+.verdict ul{margin:6px 0 0;padding-left:18px;font-size:13px}
+.adv-only{display:none} body.advisor .adv-only{display:block}
+.copied{font-size:12.5px;color:var(--accent)}
+textarea.copyfall{width:100%;min-height:140px;font-size:12px;margin-top:8px}
+
+/* 系数 */
+.coef{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.coef label{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:13.5px}
+.coef input{width:84px;text-align:right;font:inherit;border:1px solid var(--line);border-radius:6px;padding:3px 6px;background:var(--bg);color:var(--ink)}
+
+.mbar{display:none}
+@media (max-width:960px){
+  .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--surface);border-top:1px solid var(--line);
+    padding-top:10px;padding-bottom:calc(10px + env(safe-area-inset-bottom,0px));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+    justify-content:space-between;align-items:center;gap:12px}
+  .mbar b{font-family:var(--f-display);font-size:20px}
+  aside .panel{position:static}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+body{margin:0;-webkit-text-size-adjust:100%}
+:root{padding-top:env(safe-area-inset-top,0px)}
+[hidden]{display:none!important}
+.unlock{display:flex;gap:6px;align-items:center}
+.unlock input{width:120px;font:inherit;border:1px solid var(--line);border-radius:8px;padding:7px 10px;background:var(--surface);color:var(--ink)}
+.unlock span{font-size:12.5px;color:var(--warn)}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <svg class="flow" viewBox="0 0 1200 160" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 120 C 220 40, 380 150, 600 90 S 960 10, 1200 70"/>
+    <path d="M0 135 C 240 60, 400 165, 620 105 S 980 30, 1200 88" opacity=".6"/>
+    <path d="M0 150 C 260 80, 420 178, 640 120 S 1000 50, 1200 106" opacity=".35"/>
+  </svg>
+  <div class="top-in">
+    <div class="brand">
+      <small>云境大宅 · 初次洽谈</small>
+      <h1 id="logo">全案估算</h1>
+      <p>选面积、选工艺、选主材设备，每一项都能看到为什么是这个价。结果为前期估算，以正式预算为准。</p>
+    </div>
+    <div class="unlock" id="unlock" hidden><input id="code" type="password" inputmode="numeric" placeholder="顾问口令" aria-label="顾问口令"><button class="btn" id="code-ok">进入</button><span id="code-err" hidden>口令不对</span></div>
+    <div class="seg" id="seg" role="group" aria-label="视图" hidden>
+      <button id="v-client" aria-pressed="true">客户视图</button>
+      <button id="v-adv" aria-pressed="false">顾问视图</button><button id="v-lock" aria-pressed="false">退出</button>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <main id="main">
+    <section class="step" id="s-house">
+      <div class="step-h"><span class="idx">第一步</span><h2>您的房子</h2></div>
+      <p class="step-lead">面积和房型决定了吊顶、墙面、铺贴这些工程量。</p>
+      <div class="house">
+        <div class="field">
+          <label for="area">建筑面积</label>
+          <div class="area-row"><input id="area" type="number" min="40" max="1500" step="5" class="num"><span>㎡</span></div>
+          <input id="area-range" type="range" min="60" max="800" step="5" aria-label="面积滑块">
+        </div>
+        <div class="field"><span class="lab">房型</span><div class="chips" id="c-type"></div></div>
+        <div class="field"><span class="lab">房屋现状</span><div class="chips" id="c-old"></div></div>
+        <div class="field">
+          <span class="lab">卫生间数量</span>
+          <div class="stepper"><button data-step="baths:-1" aria-label="减少卫生间">−</button><output id="o-baths" class="num"></output><button data-step="baths:1" aria-label="增加卫生间">＋</button></div>
+        </div>
+        <div class="field" id="f-floors">
+          <span class="lab">楼层数</span>
+          <div class="stepper"><button data-step="floors:-1" aria-label="减少楼层">−</button><output id="o-floors" class="num"></output><button data-step="floors:1" aria-label="增加楼层">＋</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="step" id="s-craft">
+      <div class="step-h"><span class="idx">第二步</span><h2>施工工艺</h2></div>
+      <p class="step-lead">同样叫“水电”“吊顶”，用料和做法不同，价格和寿命都不同。这部分是房子看不见的骨架。</p>
+      <div id="craft"></div>
+      <details class="fixed" id="fixed">
+        <summary>标准包含项（所有方案都做） · <span id="fixed-sum" class="num"></span></summary>
+        <div class="tbl-wrap"><table><thead><tr><th>项目</th><th class="r">工程量</th><th class="r">单价</th><th class="r">小计</th></tr></thead><tbody id="fixed-body"></tbody></table></div>
+      </details>
+    </section>
+
+    <section class="step" id="s-mat">
+      <div class="step-h"><span class="idx">第三步</span><h2>主材、设备与软装</h2></div>
+      <p class="step-lead">先想清楚想要什么样的生活，再看对应的品牌。金额按您家的面积和卫生间数估算。</p>
+      <div class="ladder" id="ladder"></div>
+      <div id="mat"></div>
+    </section>
+
+    <section class="step adv-only" id="s-coef">
+      <div class="step-h"><span class="idx">顾问</span><h2>估算系数</h2></div>
+      <p class="step-lead">这些是公司的经验系数，以 350㎡ 满吊为基准。有了结算数据后在这里校准。改动只保存在当前浏览器。</p>
+      <div class="coef" id="coef"></div>
+      <p style="margin-top:12px"><button class="btn ghost" id="coef-reset">恢复默认系数</button></p>
+    </section>
+  </main>
+
+  <aside id="summary">
+    <div class="panel">
+      <div>
+        <div class="p-lab">全案估算区间</div>
+        <div class="big num" id="sum-range"></div>
+        <div class="note num" id="sum-m2"></div>
+      </div>
+      <div class="kv num" id="sum-kv"></div>
+      <div>
+        <div class="p-lab">钱花在哪里</div>
+        <div class="bars num" id="sum-bars" style="margin-top:8px"></div>
+      </div>
+      <div>
+        <div class="p-lab">整体档位 · <span id="tier-name"></span></div>
+        <div class="meter" id="meter"><div></div><div></div><div></div><div></div></div>
+        <div class="meter-l"><span>舒适</span><span>品质</span><span>臻选</span><span>尊享</span></div>
+      </div>
+      <div class="verdict adv-only" id="verdict"></div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+        <button class="btn" id="copy">复制选择小结</button>
+        <span class="copied" id="copied" hidden>已复制</span>
+      </div>
+      <textarea class="copyfall" id="copyfall" hidden readonly aria-label="选择小结"></textarea>
+      <p class="note">估算不含税（普通发票另加 3.5%），不含设计费与物业收费。标“示意价”的项目还在补充供应链数据。</p>
+    </div>
+  </aside>
+</div>
+
+<div class="mbar" id="mbar">
+  <div><div class="p-lab">全案估算</div><b class="num" id="m-range"></b></div>
+  <button class="btn ghost" id="m-go">看明细</button>
+</div>
+
+<script>
+/* ============ 图标 ============ */
+const IC = {
+  pipe:'<path d="M3 7h9a4 4 0 0 1 4 4v10"/><path d="M3 11h7a2 2 0 0 1 2 2v8"/><path d="M19 3v4"/>',
+  ceil:'<path d="M2 5h20"/><path d="M5 5v3h14V5"/><path d="M8 8c0 4 8 4 8 0"/><path d="M12 13v3"/>',
+  shape:'<path d="M3 16C6 6 10 18 13 10s6-4 8 2"/><path d="M3 20h18"/>',
+  paint:'<rect x="4" y="3" width="13" height="6" rx="1"/><path d="M17 6h3v5h-8v3"/><rect x="10" y="14" width="4" height="7" rx="1"/>',
+  drop:'<path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11z"/>',
+  tile:'<rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/><rect x="13" y="13" width="8" height="8"/>',
+  temp:'<path d="M10 14V5a2 2 0 0 1 4 0v9a4 4 0 1 1-4 0z"/><path d="M12 9v7"/>',
+  wind:'<path d="M3 9h11a3 3 0 1 0-3-3"/><path d="M3 14h15a3 3 0 1 1-3 3"/>',
+  water:'<path d="M7 3h10l-1 5H8z"/><path d="M8 8v5a4 4 0 0 0 8 0V8"/><path d="M12 17v4"/>',
+  smart:'<rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M9 17h6"/>',
+  window:'<rect x="4" y="3" width="16" height="18"/><path d="M12 3v18M4 12h16"/>',
+  bath:'<path d="M3 12h18v2a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5z"/><path d="M6 12V6a2 2 0 0 1 4 0"/><path d="M7 19l-1 2M17 19l1 2"/>',
+  kitchen:'<rect x="3" y="10" width="18" height="10"/><path d="M3 14h18M9 10V4h6v6"/>',
+  wood:'<rect x="4" y="3" width="16" height="18"/><path d="M12 3v18M9 11v2M15 11v2"/>',
+  light:'<path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/>',
+  sofa:'<path d="M4 11V8a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v3"/><path d="M2 13a2 2 0 0 1 4 0v2h12v-2a2 2 0 0 1 4 0v5H2z"/><path d="M5 18v2M19 18v2"/>'
+};
+const svg = k => `<svg viewBox="0 0 24 24" aria-hidden="true">${IC[k]||''}</svg>`;
+
+/* ============ 工艺示意图（统一 240×120 画幅） ============ */
+const T = (x,y,s,cls='t',anchor='middle') => `<text x="${x}" y="${y}" class="${cls}" text-anchor="${anchor}">${s}</text>`;
+const wires = (cx,cy) => `<circle cx="${cx-5}" cy="${cy-3}" r="3.2" class="w-l"/><circle cx="${cx+5}" cy="${cy-3}" r="3.2" class="w-n"/><circle cx="${cx}" cy="${cy+5}" r="3.2" class="w-e"/>`;
+function pipeScene(water, conduit){
+  // 墙体剖面里的一根水管 + 一根线管
+  let w='';
+  if(water==='ppr'){
+    w = `<circle cx="72" cy="56" r="24" class="m-ppr"/><circle cx="72" cy="56" r="14" class="m-void"/>`
+      + `<line x1="86" y1="56" x2="96" y2="56" class="dim"/>${T(72,98,'PPR 塑料水管','tb')}${T(72,110,'管壁厚 · 热熔连接')}`;
+  } else {
+    w = `<circle cx="72" cy="56" r="24" class="m-pe"/><circle cx="72" cy="56" r="20" class="m-steel"/><circle cx="72" cy="56" r="17.5" class="m-void"/>`
+      + `${T(72,98,'304 不锈钢水管','tb')}${T(72,110,'外层蓝色 PE 覆塑保温')}`;
+  }
+  let c='';
+  if(conduit==='pvc'){
+    c = `<circle cx="172" cy="56" r="20" class="m-pvc"/><circle cx="172" cy="56" r="16" class="m-void"/>${wires(172,56)}`
+      + `${T(172,98,'PVC 塑料线管','tb')}${T(172,110,'阻燃塑料')}`;
+  } else {
+    c = `<circle cx="172" cy="56" r="20" class="m-gi"/><circle cx="172" cy="56" r="17.5" class="m-void"/>${wires(172,56)}`
+      + `${T(172,98,'镀锌钢线管','tb')}${T(172,110,'防火 · 防鼠咬 · 抗干扰')}`;
+  }
+  return `<rect x="0" y="0" width="240" height="84" class="m-wall"/>${T(8,12,'墙体剖面','t','start')}${w}${c}`;
+}
+function ceilScene(level){
+  // 剖面：楼板 → 吊顶 → 灯带
+  const slab = `<rect x="0" y="0" width="240" height="12" class="m-slab"/><rect x="0" y="12" width="8" height="108" class="m-slab"/><rect x="232" y="12" width="8" height="108" class="m-slab"/>`;
+  let p='', glow='', cap='';
+  if(level==='l1'){
+    p = `<path d="M8 34 H232 V40 H8 Z" class="m-board"/><path d="M200 40 V58 H206 V40" class="m-line"/>`;
+    glow = `<line x1="12" y1="43" x2="40" y2="43" class="glow"/>`;
+    cap = '平顶，一个高度';
+  } else if(level==='l2'){
+    p = `<path d="M8 50 H58 V30 H182 V50 H232 V56 H8 Z" class="m-board"/>`;
+    glow = `<line x1="62" y1="33" x2="62" y2="47" class="glow"/><line x1="178" y1="33" x2="178" y2="47" class="glow"/>`;
+    cap = '两个高度，边吊藏灯带';
+  } else if(level==='l3'){
+    p = `<path d="M8 58 H44 V46 H72 V28 H168 V46 H196 V58 H232 V64 H8 Z" class="m-board"/><line x1="72" y1="28" x2="72" y2="46" class="gap"/><line x1="168" y1="28" x2="168" y2="46" class="gap"/>`;
+    glow = `<line x1="48" y1="49" x2="48" y2="55" class="glow"/><line x1="192" y1="49" x2="192" y2="55" class="glow"/>`;
+    cap = '三个高度 + 离缝阴影线';
+  } else {
+    p = `<path d="M8 62 C 50 62, 60 22, 110 26 S 170 64, 200 40 S 226 30, 232 34 V40 C 226 36, 210 40, 200 46 S 170 70, 110 32 S 50 68, 8 68 Z" class="m-board"/>`;
+    glow = `<path d="M24 72 C 60 74, 70 36, 110 38" class="glow" fill="none"/>`;
+    cap = '连续曲面，一体成型';
+  }
+  return `${slab}${p}${glow}${T(120,104,cap,'tb')}${T(120,116,'吊顶剖面示意')}`;
+}
+function paintScene(kind){
+  const id = 'pt'+kind;
+  const fill = kind==='white' ? 'm-paintw' : 'm-paintc';
+  const tex = kind==='spray' ? '' : `<pattern id="${id}" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.1" class="m-stip"/><circle cx="5.5" cy="5" r=".8" class="m-stip"/></pattern>`;
+  const over = kind==='spray' ? '' : `<rect x="18" y="14" width="130" height="78" fill="url(#${id})"/>`;
+  const lensTex = kind==='spray' ? '' : `<rect x="164" y="22" width="60" height="60" fill="url(#${id})" clip-path="url(#c${id})"/>`;
+  return `<defs>${tex}<linearGradient id="g${id}" x1="0" x2="1"><stop offset="0" class="rake0"/><stop offset="1" class="rake1"/></linearGradient><clipPath id="c${id}"><circle cx="194" cy="52" r="28"/></clipPath></defs>`
+   + `<rect x="18" y="14" width="130" height="78" class="${fill}"/>${over}<rect x="18" y="14" width="130" height="78" fill="url(#g${id})"/>`
+   + `<path d="M4 20 L18 30 M4 50 L18 54 M4 80 L18 78" class="ray"/>`
+   + `<circle cx="194" cy="52" r="28" class="${fill}"/>${lensTex}<circle cx="194" cy="52" r="28" class="m-line"/><line x1="174" y1="72" x2="160" y2="88" class="m-line"/>`
+   + `${T(83,108,'侧光照墙面','tb')}${T(194,98,kind==='spray'?'平滑无纹':'有细微滚筒纹','tb')}${T(194,110,'放大看')}`;
+}
+function wpScene(kind){
+  const coats = kind==='mapei' ? 2 : 1;
+  let wall='';
+  for(let i=0;i<coats;i++){ const o=i*3.2; wall += `<path d="M${30+o} 98 V18" class="coat"/><path d="M${210-o} 98 V18" class="coat"/>`; }
+  let floor='';
+  for(let i=0;i<2;i++){ const o=i*3.2; floor += `<path d="M${30+o} ${98-o} H${210-o}" class="coat"/>`; }
+  return `<rect x="10" y="10" width="18" height="96" class="m-slab"/><rect x="212" y="10" width="18" height="96" class="m-slab"/><rect x="10" y="100" width="220" height="10" class="m-slab"/>`
+   + wall + floor
+   + `<line x1="46" y1="18" x2="46" y2="94" class="dim"/>${T(50,56,'墙面 240cm 高','t','start')}`
+   + `${T(120,82,'地面 2 遍','tb')}${T(120,42,kind==='mapei'?'墙面 2 遍 · 柔性':'墙面 1 遍','tb')}`
+   + `${T(120,118,kind==='mapei'?'柔性浆料，轻微震动也不易开裂':'常规防水涂料')}`;
+}
+function tileScene(w,h,count){
+  // 同一个 7.2 × 3.6m 客厅，按比例 1m = 26px
+  const s=26, X=26, Y=8, W=7.2*s, H=3.6*s;
+  let lines='';
+  for(let x=w*s; x<W-0.5; x+=w*s) lines += `<line x1="${X+x}" y1="${Y}" x2="${X+x}" y2="${Y+H}" class="grout"/>`;
+  for(let y=h*s; y<H-0.5; y+=h*s) lines += `<line x1="${X}" y1="${Y+y}" x2="${X+W}" y2="${Y+y}" class="grout"/>`;
+  return `<rect x="${X}" y="${Y}" width="${W}" height="${H}" class="m-tile"/>${lines}<rect x="${X}" y="${Y}" width="${W}" height="${H}" class="m-line"/>`
+   + `${T(120,112,'同一个 7.2×3.6m 客厅，约 '+count+' 片砖','tb')}`;
+}
+function beamScene(kind){
+  const big = kind==='knauf';
+  const bh = big ? 9 : 6;
+  return `<rect x="0" y="0" width="240" height="10" class="m-slab"/>`
+   + `<line x1="40" y1="10" x2="40" y2="36" class="m-line"/><line x1="120" y1="10" x2="120" y2="36" class="m-line"/><line x1="200" y1="10" x2="200" y2="36" class="m-line"/>`
+   + `<rect x="14" y="36" width="212" height="${bh}" class="m-steel"/>`
+   + [30,70,110,150,190].map(x=>`<rect x="${x}" y="${36+bh}" width="10" height="7" class="m-steel"/>`).join('')
+   + `<rect x="14" y="${43+bh}" width="212" height="5" class="m-board"/>`
+   + `${T(120,74+bh/2,big?'60 系列主龙骨 · 截面更大':'50 系列主龙骨','tb')}`
+   + `${T(120,88+bh/2,big?'大跨度、大面积不易下垂变形':'常规跨度足够')}`
+   + `${T(120,102+bh/2,big?'蓝钧 PRO 石膏板':'拉法基纸面石膏板')}`;
+}
+const DG = {
+  'water:ppr':()=>pipeScene('ppr','pvc'),
+  'water:ss_pvc':()=>pipeScene('ss','pvc'),
+  'water:ss_gi':()=>pipeScene('ss','gi'),
+  'ceilBoard:lafarge':()=>beamScene('lafarge'),
+  'ceilBoard:knauf':()=>beamScene('knauf'),
+  'ceilShape:l1':()=>ceilScene('l1'),
+  'ceilShape:l2':()=>ceilScene('l2'),
+  'ceilShape:l3':()=>ceilScene('l3'),
+  'ceilShape:yx':()=>ceilScene('yx'),
+  'paint:white':()=>paintScene('white'),
+  'paint:color':()=>paintScene('color'),
+  'paint:spray':()=>paintScene('spray'),
+  'wp:kaxi':()=>wpScene('kaxi'),
+  'wp:mapei':()=>wpScene('mapei'),
+  'tile:612':()=>tileScene(1.2,0.6,36),
+  'tile:7515':()=>tileScene(1.5,0.75,23),
+  'tile:918':()=>tileScene(1.8,0.9,16)
+};
+const dgSvg = key => DG[key] ? `<svg class="dg" viewBox="0 0 240 120" role="img" aria-label="工艺示意图">${DG[key]()}</svg>` : '';
+
+/* ============ 档位 ============ */
+const TIERS = {0:'不选',1:'舒适',2:'品质',3:'臻选',4:'尊享'};
+const TIER_DESC = {1:'国内一线，可靠耐用',2:'中高端，品质与口碑兼顾',3:'高端进口或旗舰系列',4:'顶级奢品，私人定制'};
+
+/* ============ 经验系数（默认值来自公司工程量经验，350㎡满吊为基准） ============ */
+const COEF_DEF = {
+  ceil:{v:1.03,l:'吊顶展开面积 / 建筑面积'},
+  paint:{v:2.0,l:'油漆面积 / 建筑面积'},
+  wallShare:{v:0.65,l:'油漆面积中墙面占比'},
+  chong:{v:1.43,l:'冲筋面积 / 建筑面积'},
+  tile:{v:1.0,l:'铺贴面积 / 建筑面积'},
+  decouple:{v:0.57,l:'解耦垫面积 / 建筑面积'},
+  demo:{v:43,l:'拆除 元/㎡（建筑面积）'},
+  wall:{v:100,l:'砌墙 元/㎡（建筑面积）'},
+  oldExtra:{v:80,l:'旧房铲除加价 元/㎡'},
+  wpFloor:{v:6,l:'每卫生间地面防水 ㎡'},
+  wpWall:{v:18,l:'每卫生间墙面防水 ㎡'},
+  mgmt:{v:12,l:'工程管理费 %'},
+  misc:{v:10,l:'清运运输保护放样杂费 %'},
+  band:{v:10,l:'估算区间 ±%'},
+  coreM2:{v:4500,l:'核心客户 全案元/㎡ ≥'},
+  potM2:{v:2800,l:'可争取客户 全案元/㎡ ≥'}
+};
+
+/* 160㎡ 与 400㎡ 两个参考点之间按面积插值；小于160按比例缩，留四成固定部分 */
+function interp(v160, v400, A){
+  if (A >= 160) return v160 + (v400 - v160) * (A - 160) / 240;
+  return v160 * (0.4 + 0.6 * A / 160);
+}
+const winArea = A => interp(51, 163, A); // 门窗面积，由配置表门窗案例反推
+
+/* ============ 施工工艺（可选项），单价来自基础工程预算书 ============ */
+const CEIL_P = {
+  lafarge:{l1:128,l2:178,l3:212,yx:250},
+  knauf:{l1:148,l2:188,l3:232,yx:270}
+};
+const CRAFT = [
+  {id:'water',title:'水电管线',icon:'pipe',intro:'全房走顶、三线同径，上海熊猫高阻燃电线。按建筑面积包干。',
+   qty:c=>c.A, unit:'㎡',
+   options:[
+    {id:'ppr',name:'PPR 水管 + PVC 线管',tier:2,price:231,desc:'行业主流做法，满足正常使用年限。',talk:'这是我们的基础报价，已经是走顶、三线同径的标准，不是最低配。'},
+    {id:'ss_pvc',name:'304 不锈钢水管 + PVC 线管',tier:3,price:268,desc:'304 不锈钢保温水管，带 PE 覆塑层。耐压耐高温，不老化，水质更干净。',talk:'水管埋在墙里几十年，换一次要砸墙。每平多 37 元，换的是一辈子不用担心。'},
+    {id:'ss_gi',name:'304 不锈钢水管 + 镀锌线管',tier:4,price:362,desc:'水管同上；电线管换成镀锌钢管，防火、防鼠咬、抗压，屏蔽干扰。',talk:'别墅和智能家居多的客户推荐，线管是金属的，消防等级和抗干扰都更好。'}
+   ]},
+  {id:'ceilBoard',title:'吊顶龙骨与石膏板',icon:'ceil',intro:'吊顶平不平、会不会开裂，主要看龙骨和板材。',
+   qty:null, options:[
+    {id:'lafarge',name:'50 卡式黄金龙骨 + 拉法基石膏板',tier:2,price:0,desc:'国标轻钢龙骨，9mm 拉法基纸面石膏板。基础报价标准。',talk:'拉法基本身就是一线品牌，大部分客户选这个足够。'},
+    {id:'knauf',name:'可耐福蓝臻 60 龙骨 + 蓝钧 PRO 石膏板',tier:3,price:0,desc:'60 系列龙骨更粗更稳，大跨度、大面积吊顶不易变形开裂。',talk:'层高高、吊顶面积大、造型多的房子，强烈建议升级，差价不大。'}
+   ]},
+  {id:'ceilShape',title:'吊顶造型',icon:'shape',intro:'按展开面积计算，含窗帘盒、灯槽。造型越复杂，工时和用料越多。',
+   qty:c=>c.A*c.C.ceil, unit:'㎡',
+   options:[
+    {id:'l1',name:'平顶为主（一级）',tier:1,desc:'简洁平顶，配灯槽和窗帘盒。',talk:'适合极简风格，预算优先的客户。'},
+    {id:'l2',name:'叠级造型（二级）',tier:2,desc:'有层次的叠级吊顶，可隐藏空调风口和灯带。',talk:'大部分家庭的选择。'},
+    {id:'l3',name:'多级 / 离缝造型（三级）',tier:3,desc:'三级叠级或离缝工艺，线条感强，对平整度要求高。',talk:'对细节要求高的客户，可以展示离缝案例。'},
+    {id:'yx',name:'异形流线造型',tier:4,desc:'曲面、弧形、流线型吊顶。点云扫描建模，造型与空间一体设计。这是云境最擅长的部分。',talk:'重点推荐。拿出异形案例，讲点云扫描和工厂预制，这是别家做不了的。'}
+   ]},
+  {id:'paint',title:'墙面涂装',icon:'paint',intro:'基层已含特伦固冲筋找平和挂网批嵌（见标准包含项），这里选面漆。',
+   qty:c=>c.A*c.C.paint, unit:'㎡',
+   options:[
+    {id:'white',name:'芬琳 欧铁华 · 白色滚涂',tier:2,price:35.8,desc:'进口芬琳乳胶漆，一底二面，全房白色。',talk:'进口漆是标配，不是升级项。'},
+    {id:'color',name:'芬琳 欧铁华 · 调色滚涂',tier:2,price:43.8,desc:'同款漆按设计调色。',talk:'有色墙面的客户选这个，每平多 8 元。'},
+    {id:'spray',name:'芬琳 欧铁华 · 调色喷涂',tier:3,price:61.7,desc:'喷涂工艺，漆膜更均匀细腻，没有滚筒纹。',talk:'侧光下看墙面，喷涂和滚涂差别很明显。'}
+   ]},
+  {id:'wp',title:'卫生间防水',icon:'drop',intro:'地面两遍、上翻 30cm；墙面做到 240cm 高。',
+   qty:c=>c.baths, unit:'间',
+   options:[
+    {id:'kaxi',name:'卡西防水',tier:2,price:null,desc:'防水涂料，地面两遍、墙面一遍。',talk:''},
+    {id:'mapei',name:'马贝柔性防水',tier:3,price:null,desc:'马贝柔性防水，粘接强度 1.0–1.5 兆帕，能抵抗轻微震动开裂。墙面刷两遍。',talk:'卫生间漏水是最麻烦的售后，每间多几百块，值得。'}
+   ]},
+  {id:'tile',title:'地面铺贴规格',icon:'tile',intro:'含人工和瓷砖粘贴剂，标配解耦垫防空鼓（见标准包含项）。瓷砖主材在第三步选。',
+   qty:c=>c.A*c.C.tile, unit:'㎡',
+   options:[
+    {id:'612',name:'600×1200',tier:1,price:125,desc:'常规大板，铺贴难度适中。',talk:''},
+    {id:'7515',name:'750×1500',tier:2,price:150,desc:'大板通铺，缝少，空间更整。',talk:'现在中高端客户的主流规格。'},
+    {id:'918',name:'900×1800',tier:3,price:165,desc:'超大板，几乎看不到缝，对找平和铺贴手艺要求最高。',talk:'大平层、别墅客厅推荐，效果接近石材。'}
+   ]}
+];
+function craftPrice(item, opt, s, c){
+  if (item.id === 'ceilShape') return CEIL_P[s.ceilBoard][opt.id];
+  if (item.id === 'wp') return opt.id === 'kaxi' ? c.C.wpFloor*85 + c.C.wpWall*66 : c.C.wpFloor*108 + c.C.wpWall*85;
+  return opt.price;
+}
+
+/* ============ 主材设备软装：按品牌市场定位分四档 ============
+   partner = 云境合作品牌（价格取自品质配置表）；est = 市场参考或推算，待供应链确认 */
+const NONE = {id:'none',name:'暂不考虑 / 自理',tier:0,calc:()=>0,desc:'不计入估算。',talk:''};
+const MAT = [
+  {id:'hvac',group:'冷暖',title:'冷暖系统',icon:'temp',
+   intro:'中央空调和地暖一起规划，管路和机位一次到位。',
+   diff:'档位越高，越安静，控温越准，风越柔和；冬天从吹热风变成地面辐射采暖。',
+   options:[
+    {id:'h1',tier:1,name:'国产一线多联机',brands:'格力 · 美的 · 海尔',partner:'格力',pos:'国产一线，性价比高，售后网点多',
+     calc:c=>interp(48200,83500,c.A),desc:'全直流变频，一级能效。只有空调，冬天靠吹热风。',talk:'家里有老人小孩的，冬天只靠空调吹热风体感会差，可以往上推地暖。'},
+    {id:'h2',tier:2,name:'旗舰多联机 + 天氟地水地暖',brands:'美的领航者 · 海信日立 · 东芝',partner:'美的',pos:'国产旗舰与合资品牌',
+     calc:c=>interp(74800,146000,c.A),desc:'一台主机同时管空调和地暖。冬天脚暖头凉，空气不干。',talk:'一台主机解决冷暖，是性价比最高的舒适方案。'},
+    {id:'h3',tier:3,name:'日系高端空调 + 进口壁挂炉地暖',brands:'大金 · 三菱电机 + 威能 · 博世',partner:'大金、威能',pos:'日系一线空调 + 德系采暖',
+     calc:c=>interp(107000,280000,c.A),desc:'日系压缩机和静音技术；进口冷凝壁挂炉同时供地暖和生活热水。',talk:'对品牌认知度高的客户直接讲这套。'},
+    {id:'h3b',tier:3,name:'水系统空调地暖一体',brands:'约克 · 特灵 · 开利',partner:'约克、特灵',pos:'美系水机，商用级稳定性',
+     calc:c=>interp(78000,180000,c.A),desc:'冷热水在管道里循环，出风柔和不干燥。面积越大、越是常住，越稳定省电。',talk:'约克是授权合作，面积大的别墅优先推荐。'},
+    {id:'h4',tier:4,name:'恒温恒湿恒氧系统',brands:'朗肯 · 森德 · 曼瑞德 三恒系统',pos:'高端住宅的舒适系统',est:'市场参考，按 800 元/㎡ 估',
+     calc:c=>c.A*800,desc:'顶面或地面辐射供冷暖，配置换新风和除湿。全年恒温恒湿，室内几乎感觉不到风。',talk:'三恒系统已含新风，新风一项可以选暂不考虑。'},
+    NONE]},
+  {id:'fresh',group:'冷暖',title:'新风系统',icon:'wind',
+   intro:'关着窗也有新鲜空气，过滤 PM2.5 和花粉，降低二氧化碳浓度，睡得更好。',
+   diff:'档位越高，过滤等级和热回收效率越高，噪音越低，还能控湿。',
+   options:[
+    {id:'f1',tier:1,name:'全热交换新风',brands:'美的 · 松下 · 远大',partner:'美的',pos:'国产与日系主流品牌',est:'400㎡ 按两台估',
+     calc:c=>interp(8500,17000,c.A),desc:'取新风不影响室内冷暖，可接智能网关。',talk:''},
+    {id:'f2',tier:2,name:'高效过滤新风',brands:'霍尼韦尔 · 博乐 · 兰舍',partner:'霍尼韦尔',pos:'专业空气品牌',est:'400㎡ 按两台估',
+     calc:c=>interp(16800,33600,c.A),desc:'G4+H12 过滤，可水洗热交换芯，双直流电机低噪。',talk:'家里有过敏体质或小孩，重点讲过滤等级。'},
+    {id:'f3',tier:3,name:'新风除湿一体',brands:'曼瑞德 · 湿腾 · 吉宝',partner:'曼瑞德、湿腾',pos:'德系新风与专业除湿',
+     calc:c=>interp(25000,50000,c.A),desc:'新风加除湿，回南天和梅雨季墙地不返潮。',talk:'南昌湿度大，这个卖点很实在。'},
+    {id:'f4',tier:4,name:'欧洲顶级新风',brands:'森德 Zehnder 等欧洲品牌',pos:'欧洲顶级通风系统',est:'市场参考价',
+     calc:c=>interp(40000,90000,c.A),desc:'热回收效率高，运行几乎无声，风管系统按设计定制。',talk:''},
+    NONE]},
+  {id:'water',group:'冷暖',title:'净水系统',icon:'water',
+   intro:'从进户水管开始过滤，洗澡、做饭、喝水分级处理。',
+   diff:'档位越高，从“能直接喝”升级到“全屋软水”，洗澡皮肤不干，热水器不结垢。',
+   options:[
+    {id:'w1',tier:1,name:'前置 + 中央净水 + 管线机',brands:'安吉尔 · 沁园',partner:'安吉尔',pos:'国产净水主流品牌',est:'400㎡ 按 1.3 倍估',
+     calc:c=>interp(6500,8500,c.A),desc:'全屋水先过滤一遍，厨房出直饮水。',talk:''},
+    {id:'w2',tier:2,name:'大通量净水 + 两台管线机',brands:'美的 · A.O.史密斯',partner:'美的',pos:'家电与热水专业品牌',est:'400㎡ 按 1.3 倍估',
+     calc:c=>interp(10000,13000,c.A),desc:'管线机出水即喝，多档水温。',talk:''},
+    {id:'w3',tier:3,name:'全屋净水 + 中央软水',brands:'怡口 · 滨特尔',partner:'怡口',pos:'进口专业水处理',est:'400㎡ 按 1.2 倍估',
+     calc:c=>interp(27500,33000,c.A),desc:'前置、中央净水、中央软水、直饮机、管线机全套。',talk:'怡口基础三件套约 5000 元，预算有限可以先做这个。'},
+    {id:'w4',tier:4,name:'全屋净软水 + 多点直饮循环',brands:'怡口高端线 · 康丽根 Culligan',pos:'进口高端定制方案',est:'市场参考价',
+     calc:c=>interp(45000,60000,c.A),desc:'多个用水点即开即饮，热水循环，按家庭用水定制。',talk:''},
+    NONE]},
+  {id:'smart',group:'智能',title:'全屋智能',icon:'smart',
+   intro:'灯光、窗帘、空调、安防联动。要在水电阶段就预留好。',
+   diff:'档位越高，从手机遥控，到场景自动联动，再到专业调光和全屋一体控制。',
+   options:[
+    {id:'s1',tier:1,name:'智能单品联动',brands:'小米 · 涂鸦生态',pos:'大众智能生态',est:'市场参考价',
+     calc:c=>interp(15000,35000,c.A),desc:'智能开关、窗帘电机、门锁、网关，用手机和语音控制。',talk:''},
+    {id:'s2',tier:2,name:'全屋智能',brands:'COLMO · 华为全屋智能 · 欧瑞博',partner:'COLMO',pos:'国产高端全屋方案',est:'160㎡ 按比例估',
+     calc:c=>interp(30000,65000,c.A),desc:'门窗遮阳、开关面板、安防、传感器、中控和网络，可以控制全屋电器。',talk:''},
+    {id:'s3',tier:3,name:'全屋智能 + 专业调光',brands:'摩根 ZigBee Plus',partner:'摩根',pos:'专业灯光控制',est:'160㎡ 按比例估',
+     calc:c=>interp(65000,150000,c.A),desc:'断了外网也能用，专业无极调光，面板好看，不破坏装修效果。',talk:'灯光设计做得好的项目，要配无极调光才出效果。'},
+    {id:'s4',tier:4,name:'专业级控制系统',brands:'快思聪 Crestron · 路创 Lutron · KNX',pos:'国际顶级控制系统',est:'市场参考价',
+     calc:c=>interp(150000,400000,c.A),desc:'影音、灯光、遮阳、暖通一体控制，由系统集成商定制编程。',talk:''},
+    NONE]},
+  {id:'window',group:'门窗',title:'系统门窗',icon:'window',
+   intro:'隔音、保温、密封、安全。按窗面积计价，大玻璃和开启扇另算。',
+   diff:'档位越高，型材越厚，玻璃越大越厚，隔音和气密越好，开关越顺滑。',
+   options:[
+    {id:'n1',tier:1,name:'系统门窗',brands:'杰若斯 · 圣梵尼',partner:'杰若斯、圣梵尼',pos:'国产性价比系统窗',
+     calc:c=>winArea(c.A)*720,desc:'约 650–800 元/㎡。',talk:''},
+    {id:'n2',tier:2,name:'外开窗纱一体',brands:'简景 · 新豪轩 · 皇派',partner:'简景',pos:'广东一线门窗品牌',
+     calc:c=>winArea(c.A)*980,desc:'约 980 元/㎡。品质和售后有保障。',talk:''},
+    {id:'n3',tier:3,name:'进口系统门窗',brands:'德森克 · 墨瑟',partner:'德森克、墨瑟',pos:'进口高端品牌',
+     calc:c=>winArea(c.A)*1450,desc:'约 1300–1550 元/㎡。性能全面，安全性高。',talk:'临街、高层、别墅的客户，重点讲隔音和抗风压。'},
+    {id:'n4',tier:4,name:'欧洲顶级系统门窗',brands:'旭格 Schüco · 瑞纳斯 Reynaers',pos:'德国、比利时顶级型材',est:'市场参考，按 2500 元/㎡ 估',
+     calc:c=>winArea(c.A)*2500,desc:'超大玻璃、极窄边框，适合大景观面。',talk:''},
+    NONE]},
+  {id:'tileMat',group:'主材',title:'瓷砖与石材',icon:'tile',
+   intro:'地面墙面的“脸面”。看釉面、耐磨、防滑和纹理。',
+   diff:'档位越高，釉面和纹理越自然，规格越大，最后从瓷砖走向天然石材。',
+   options:[
+    {id:'t1',tier:1,name:'一线品牌瓷砖',brands:'马可波罗 · 东鹏 · 蒙娜丽莎整装系列',partner:'马可波罗、蒙娜丽莎',pos:'国产一线瓷砖',
+     calc:c=>interp(13500,33800,c.A),desc:'一石多面，止滑釉，耐磨 4 级。',talk:''},
+    {id:'t2',tier:2,name:'高端系列瓷砖',brands:'蒙娜丽莎岁月风华 · 诺贝尔 · 简一',partner:'蒙娜丽莎',pos:'国产高端系列',
+     calc:c=>interp(24000,55000,c.A),desc:'双零吸水，进口羊脂釉，脚感温润，防污好打理，数码对纹。',talk:''},
+    {id:'t3',tier:3,name:'公区天然大理石 + 高端瓷砖',brands:'金磊大理石（大地灰、爵士白、米黄）+ 蒙娜丽莎',partner:'金磊',pos:'国产 B+ 级天然石材',est:'公区按 35% 面积估',
+     calc:c=>0.35*c.A*480*1.1 + interp(24000,55000,c.A)*0.65,desc:'客餐厅铺天然石材，其他空间用高端瓷砖。',talk:'石材每块纹理不同，可以带客户去石材厂挑板。'},
+    {id:'t4',tier:4,name:'进口瓷砖 / 进口天然石材',brands:'Florim · Mirage 等意大利品牌 / 进口石材',pos:'意大利进口',est:'市场参考，按 700 元/㎡ 估',
+     calc:c=>c.A*1.1*700,desc:'意大利大板或进口石材，纹理和色泽更高级。',talk:''},
+    NONE]},
+  {id:'bath',group:'主材',title:'卫浴洁具',icon:'bath',
+   intro:'马桶、花洒、龙头、台盆、浴室柜、淋浴隔断。按卫生间数量计。',
+   diff:'档位越高，阀芯越耐用，镀层越不易褪色，恒温越准，设计感越强。',
+   options:[
+    {id:'b1',tier:1,name:'国内一线',brands:'恒洁 · 箭牌 · 九牧',partner:'恒洁、箭牌',pos:'国产一线卫浴',
+     calc:c=>6500*c.baths,desc:'轻智能马桶、恒温花洒、浴室柜、淋浴隔断整套。约 6500 元/间。',talk:''},
+    {id:'b2',tier:2,name:'国际品牌',brands:'Roca · TOTO · 科勒',partner:'Roca',pos:'国际主流品牌',
+     calc:c=>13000*c.baths,desc:'轻智能马桶、恒温花洒、多层实木浴室柜、304 边框隔断。约 1.3 万/间。',talk:''},
+    {id:'b3',tier:3,name:'德系高端',brands:'高仪 · 汉斯格雅 · 杜拉维特 · 唯宝',partner:'高仪、杜拉维特',pos:'德系高端卫浴',est:'柜体和隔断按国际品牌档估',
+     calc:c=>24500*c.baths,desc:'入墙龙头、暗装恒温花洒、全智能马桶。约 2.45 万/间。',talk:'九牧和汉斯格雅差在阀芯寿命、镀层耐久和恒温精度，用的时间越长差别越明显。'},
+    {id:'b4',tier:4,name:'奢侈级卫浴',brands:'雅生 AXOR · 德立菲 Dornbracht',pos:'德国顶级卫浴',est:'市场参考价',
+     calc:c=>50000*c.baths,desc:'设计师系列五金，造型和饰面可以选。约 5 万/间起。',talk:''},
+    NONE]},
+  {id:'kitchen',group:'主材',title:'橱柜',icon:'kitchen',
+   intro:'台面、地柜、吊柜、水槽、拉篮。',
+   diff:'档位越高，板材和五金越好，柜门工艺越精细，最后到德国进口。',
+   options:[
+    {id:'k1',tier:1,name:'品牌定制橱柜',brands:'欧派 · 志邦',pos:'国产大家居品牌',est:'市场参考价',
+     calc:c=>interp(20000,35000,c.A),desc:'标准板材和五金，款式多。',talk:''},
+    {id:'k2',tier:2,name:'专业橱柜品牌',brands:'金牌',partner:'金牌',pos:'27 年橱柜专业品牌',
+     calc:c=>interp(25000,45000,c.A),desc:'德国豪迈封边，MDI 无醛胶颗粒板，石英台面，免胶锁扣台下盆专利。',talk:''},
+    {id:'k3',tier:3,name:'高端橱柜',brands:'博洛尼 · 我乐',pos:'国产高端设计品牌',est:'市场参考价',
+     calc:c=>interp(50000,90000,c.A),desc:'设计感强，进口五金，柜门工艺更多。',talk:''},
+    {id:'k4',tier:4,name:'德国进口橱柜',brands:'Poggenpohl · SieMatic · Bulthaup',pos:'德国顶级厨房',est:'市场参考价',
+     calc:c=>interp(150000,300000,c.A),desc:'原装进口，厨房即客厅的开放式设计。',talk:''},
+    {id:'withwood',tier:0,name:'随整木定制一起做',brands:'见下方木作',calc:()=>0,desc:'橱柜和全屋木作同一品牌，风格统一。费用含在木作里。',talk:''},
+    NONE]},
+  {id:'wood',group:'定制',title:'全屋木作定制',icon:'wood',
+   intro:'门、墙板、柜子一体设计，门墙柜综合计价。通常是全案里占比最大的一项。',
+   diff:'档位越高，从板材到实木和木皮，五金和工艺越讲究，设计原创度越高。',
+   options:[
+    {id:'d1',tier:1,name:'板式柜体定制',brands:'索菲亚 · 欧派 · 私享艺家高定板',partner:'私享艺家',pos:'只做柜体，门和墙用常规做法',est:'按柜体投影面积估',
+     calc:c=>c.A*0.3*1280,desc:'柜体、柜门、标配五金、测量安装。约 1280 元/㎡投影面积。',talk:''},
+    {id:'d2',tier:2,name:'门墙柜一体定制',brands:'Modern Life · 安图家 · 兴邦',partner:'Modern Life、安图家、兴邦',pos:'个性化门墙柜一体',
+     calc:c=>interp(400000,1350000,c.A),desc:'原创花色多，基材可选。综合约 2000–8000 元/㎡。',talk:''},
+    {id:'d3',tier:3,name:'老字号整木定制',brands:'欧雅纳特 · 奢悦 · 凯仕捷 · 国振',partner:'欧雅纳特、奢悦、凯仕捷、国振',pos:'实木与木皮工艺见长',
+     calc:c=>interp(550000,2000000,c.A),desc:'讲究基材、工艺和落地，国际东方、新中式、法式、宋式美学都能做。综合约 3000–12000 元/㎡。',talk:'国振擅长中式传世大宅，有手工雕花和薄木拼花。'},
+    {id:'d4',tier:4,name:'顶奢整木定制',brands:'木里木外',partner:'木里木外',pos:'国内顶奢整木',
+     calc:c=>interp(800000,3000000,c.A),desc:'木皮、基材、五金特供，原创设计。综合约 5000–15000 元/㎡。',talk:'身份感和品味表达，适合顶层客户。'},
+    NONE]},
+  {id:'light',group:'软装',title:'灯光',icon:'light',
+   intro:'光决定了房子晚上的样子。',
+   diff:'档位越高，光越舒服（防眩光、显色好），有专业灯光设计，灯具本身就是艺术品。',
+   options:[
+    {id:'l1',tier:1,name:'常规灯具',brands:'欧普 · 雷士 · 三雄极光',pos:'国产照明品牌',est:'市场参考价',
+     calc:c=>interp(8000,16000,c.A),desc:'主灯加筒灯，满足照明。',talk:''},
+    {id:'l2',tier:2,name:'无主灯专业灯光',brands:'辉宇 VBOCGA',partner:'辉宇',pos:'专业灯光设计',
+     calc:c=>interp(15000,30000,c.A),desc:'专业灯光设计，10 趟现场对接，10 年质保。',talk:''},
+    {id:'l3',tier:3,name:'无主灯 + 装饰主灯',brands:'辉宇 VBOCGA + 辉宇灯饰',partner:'辉宇',pos:'功能光加装饰光',
+     calc:c=>interp(20000,38500,c.A),desc:'在无主灯基础上，客厅、餐厅、卧室配装饰主灯。',talk:''},
+    {id:'l4',tier:4,name:'进口设计师灯具',brands:'Flos · Artemide · Louis Poulsen',pos:'意大利、丹麦设计灯具',est:'市场参考价',
+     calc:c=>interp(50000,120000,c.A),desc:'经典设计款灯具配专业灯光方案。',talk:''},
+    NONE]},
+  {id:'soft',group:'软装',title:'家具与软装',icon:'sofa',
+   intro:'沙发、床、餐桌、窗帘、地毯、饰品。',
+   diff:'档位越高，皮、木、面料越好，做工越细，设计原创度越高。',
+   options:[
+    {id:'p1',tier:1,name:'国内主流家具',brands:'顾家 · 芝华仕 · 林氏木业',pos:'国内大众品牌',est:'示意价，约 400 元/㎡',
+     calc:c=>c.A*400,desc:'款式多，交付快。',talk:''},
+    {id:'p2',tier:2,name:'国内高端 / 设计师品牌',brands:'半木 · 梵几 · 联邦 · 慕思',pos:'国内高端与原创设计',est:'示意价，约 800 元/㎡',
+     calc:c=>c.A*800,desc:'实木和原创设计，东方气质。',talk:''},
+    {id:'p3',tier:3,name:'国际品牌',brands:'Natuzzi · BoConcept · Ligne Roset',pos:'意大利、丹麦、法国品牌',est:'示意价，约 1500 元/㎡',
+     calc:c=>c.A*1500,desc:'进口皮料和面料，经典设计。',talk:''},
+    {id:'p4',tier:4,name:'意式顶奢',brands:'Minotti · B&B Italia · Poliform · Cassina',pos:'意大利顶级家具',est:'示意价，约 3000 元/㎡',
+     calc:c=>c.A*3000,desc:'意大利原装进口，大师设计。',talk:''},
+    NONE]}
+];
+
+/* ============ 状态 ============ */
+const DEF_STATE = {A:200,type:'flat',old:false,baths:2,floors:3,
+  sel:{water:'ss_pvc',ceilBoard:'lafarge',ceilShape:'l2',paint:'white',wp:'mapei',tile:'7515',
+       hvac:'h2',fresh:'f2',water_m:'w2',smart:'s2',window:'n2',tileMat:'t2',bath:'b2',kitchen:'k2',wood:'d2',light:'l2',soft:'p2'}};
+const KEY='yj-est-v2';
+let S = JSON.parse(JSON.stringify(DEF_STATE));
+let COEF = Object.fromEntries(Object.entries(COEF_DEF).map(([k,o])=>[k,o.v]));
+try{ const raw=localStorage.getItem(KEY); if(raw){const o=JSON.parse(raw); if(o.S) S=Object.assign(S,o.S,{sel:Object.assign({},S.sel,o.S.sel||{})}); if(o.C) Object.assign(COEF,o.C);} }catch(e){}
+let advisor=false;
+const ADV_CODE='2026'; // 顾问口令，可自行修改
+let unlocked=false;
+try{ unlocked = localStorage.getItem(KEY+'-unlock')==='1'; advisor = unlocked && localStorage.getItem(KEY+'-view')==='adv'; }catch(e){}
+function save(){ try{ localStorage.setItem(KEY, JSON.stringify({S, C:COEF})); }catch(e){} }
+
+const selKey = id => id==='water' ? 'water' : id; // 工艺 water
+const matKey = id => id==='water' ? 'water_m' : id; // 主材 water
+
+const floorsOf = () => S.type==='flat'?1 : S.type==='duplex'?2 : S.floors;
+const ctx = () => ({A:S.A, baths:S.baths, floors:floorsOf(), C:COEF});
+
+/* ============ 计算 ============ */
+function compute(){
+  const c = ctx(), A=c.A, C=c.C;
+  const craft=[];
+  for(const it of CRAFT){
+    if(!it.qty) continue;
+    const o = it.options.find(x=>x.id===S.sel[selKey(it.id)]);
+    const p = craftPrice(it,o,S.sel,c), q = it.qty(c);
+    craft.push({id:it.id,name:it.title,opt:o,qty:q,unit:it.unit,price:p,amt:p*q,tier:it.id==='ceilShape'?Math.max(o.tier, S.sel.ceilBoard==='knauf'?3:2):o.tier});
+  }
+  const fixed=[
+    ['拆除',A,'㎡',C.demo],
+    ...(S.old?[['旧房铲除（墙面灰层、地砖、吊顶、门套）',A,'㎡',C.oldExtra]]:[]),
+    ['新砌墙体',A,'㎡',C.wall],
+    ['水电开槽、管线槽粉刷、开槽清洗',A,'㎡',26.5],
+    ['地面解耦垫（防空鼓）',A*C.decouple,'㎡',137],
+    ['特伦固冲筋找平',A*C.chong,'㎡',87],
+    ['滚墙固',A*C.paint,'㎡',8],
+    ['墙面批嵌（挂网，特伦固）',A*C.paint*C.wallShare,'㎡',80],
+    ['天棚批嵌（特伦固）',A*C.paint*(1-C.wallShare),'㎡',68],
+    ['灯具安装',1,'项',S.type==='flat'?650:S.type==='duplex'?900:1300],
+    ['视频监控服务',1,'套',2000],
+  ];
+  if(S.type!=='flat'){
+    fixed.push(['架空脚手架',c.floors,'副',266]);
+    fixed.push(['临时踏步扶梯',1,'项',1000+290*Math.max(0,c.floors-2)]);
+  }
+  if(S.type==='villa') fixed.push(['桥架施工',A,'㎡',15]);
+  const fixedRows = fixed.map(([n,q,u,p])=>({name:n,qty:q,unit:u,price:p,amt:q*p}));
+  const fixedSum = fixedRows.reduce((s,r)=>s+r.amt,0);
+  const craftSel = craft.reduce((s,r)=>s+r.amt,0);
+  const direct = fixedSum + craftSel;
+  const mgmt = direct*C.mgmt/100, misc = direct*C.misc/100;
+  const base = direct+mgmt+misc;
+
+  const mats = MAT.map(it=>{
+    const o = it.options.find(x=>x.id===S.sel[matKey(it.id)]) || NONE;
+    return {id:it.id,title:it.title,group:it.group,opt:o,amt:Math.max(0,o.calc(c))};
+  });
+  const matSum = mats.reduce((s,m)=>s+m.amt,0);
+  const total = base+matSum;
+
+  // 档位：按金额加权
+  let w=0, ws=0;
+  for(const m of mats){ if(m.opt.tier>0){ ws+=m.amt*m.opt.tier; w+=m.amt; } }
+  for(const r of craft){ ws+=r.amt*r.tier; w+=r.amt; }
+  const tierIdx = w? ws/w : 0;
+
+  return {c,craft,fixedRows,fixedSum,craftSel,direct,mgmt,misc,base,mats,matSum,total,tierIdx};
+}
+
+/* ============ 格式 ============ */
+const wan = v => (v/10000).toFixed(v>=1e6?0:1).replace(/\.0$/,'') ;
+const fmtWan = v => v<=0 ? '—' : `${(v/10000).toFixed(1)} 万`;
+const yuan = v => Math.round(v).toLocaleString('zh-CN');
+const tierName = t => t<1.5?'舒适':t<2.5?'品质':t<3.3?'臻选':'尊享';
+const tierLevel = t => t<1.5?1:t<2.5?2:t<3.3?3:4;
+const esc = s => String(s).replace(/[&<>"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
+
+/* ============ 渲染（一次） ============ */
+function renderStatic(){
+  // 房型、现状
+  const types=[['flat','平层'],['duplex','复式'],['villa','别墅']];
+  document.getElementById('c-type').innerHTML = types.map(([k,l])=>`<button class="chip" data-type="${k}">${l}</button>`).join('');
+  document.getElementById('c-old').innerHTML = `<button class="chip" data-old="0">毛坯 / 新房</button><button class="chip" data-old="1">旧房翻新</button>`;
+
+  // 档位说明
+  document.getElementById('ladder').innerHTML = [1,2,3,4].map(t=>`<span><span class="tier t${t}">${TIERS[t]}</span>${TIER_DESC[t]}</span>`).join('');
+
+  // 工艺
+  document.getElementById('craft').innerHTML = CRAFT.map(it=>`
+    <div class="item" data-item="${it.id}">
+      <div class="item-h"><div class="ico">${svg(it.icon)}</div>
+        <div style="min-width:0"><h3>${it.title}</h3><p>${it.intro}</p></div>
+        <div class="item-sub num" data-isub="${it.id}"></div></div>
+      <div class="opts">${it.options.map(o=>`
+        <button class="opt" data-k="${selKey(it.id)}" data-v="${o.id}">
+          <div class="row"><span class="name">${o.name}</span><span class="tier t${o.tier}">${TIERS[o.tier]}</span></div>
+          ${o.img?`<img class="img" src="${o.img}" alt="">`:dgSvg(it.id+':'+o.id)}
+          <div class="desc">${o.desc}</div>
+          ${o.talk?`<div class="talk">${o.talk}</div>`:''}
+          <div class="price num" data-cp="${it.id}:${o.id}"></div>
+        </button>`).join('')}</div>
+    </div>`).join('');
+
+  // 主材
+  let lastGroup='';
+  document.getElementById('mat').innerHTML = MAT.map(it=>{
+    return `
+    <div class="item" data-item="${it.id}">
+      <div class="item-h"><div class="ico">${svg(it.icon)}</div>
+        <div style="min-width:0"><h3>${it.title}</h3><p>${it.intro}</p><p class="diff"><b>档位差在哪：</b>${it.diff}</p></div>
+        <div class="item-sub num" data-msub="${it.id}"></div></div>
+      <div class="opts mats">${it.options.map(o=>`
+        <button class="opt" data-k="${matKey(it.id)}" data-v="${o.id}">
+          <div class="row"><span class="name">${o.name}</span>${o.tier?`<span class="tier t${o.tier}">${TIERS[o.tier]}</span>`:''}</div>
+          ${o.brands?`<div class="brands">${o.brands}</div>`:''}
+          ${o.pos?`<div class="pos">定位：${o.pos}</div>`:''}
+          ${o.partner?`<span class="partner">云境合作：${o.partner}</span>`:''}
+          ${o.img?`<img class="img" src="${o.img}" alt="">`:''}
+          <div class="desc">${o.desc}</div>
+          ${o.talk?`<div class="talk">${o.talk}</div>`:''}
+          <div class="price num" data-mp="${it.id}:${o.id}"></div>
+        </button>`).join('')}</div>
+    </div>`}).join('');
+
+  // 系数
+  document.getElementById('coef').innerHTML = Object.entries(COEF_DEF).map(([k,o])=>`<label for="cf-${k}"><span>${o.l}</span><input id="cf-${k}" data-coef="${k}" type="number" step="any" class="num"></label>`).join('');
+}
+
+/* ============ 更新 ============ */
+function update(){
+  const R = compute(), c=R.c;
+  // 房屋
+  const area=document.getElementById('area'); if(document.activeElement!==area) area.value=S.A;
+  document.getElementById('area-range').value=Math.min(800,Math.max(60,S.A));
+  document.querySelectorAll('[data-type]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.type===S.type));
+  document.querySelectorAll('[data-old]').forEach(b=>b.setAttribute('aria-pressed',(b.dataset.old==='1')===S.old));
+  document.getElementById('o-baths').textContent=S.baths;
+  document.getElementById('o-floors').textContent=floorsOf();
+  document.getElementById('f-floors').hidden = S.type!=='villa';
+
+  // 选中
+  document.querySelectorAll('.opt').forEach(b=>b.setAttribute('aria-pressed', S.sel[b.dataset.k]===b.dataset.v));
+
+  // 工艺价格
+  for(const it of CRAFT){
+    for(const o of it.options){
+      const el=document.querySelector(`[data-cp="${it.id}:${o.id}"]`);
+      if(it.id==='ceilBoard'){
+        const shape=CRAFT.find(x=>x.id==='ceilShape').options.find(x=>x.id===S.sel.ceilShape);
+        const q=c.A*c.C.ceil, d=(CEIL_P[o.id][shape.id]-CEIL_P.lafarge[shape.id])*q;
+        el.innerHTML = o.id==='lafarge' ? `<span>基础报价</span><b>标配</b>` : `<span>按当前造型 +${CEIL_P[o.id][shape.id]-CEIL_P.lafarge[shape.id]} 元/㎡</span><b>+${yuan(d)}</b>`;
+      } else {
+        const p=craftPrice(it,o,S.sel,c), q=it.qty(c);
+        el.innerHTML = `<span>${it.id==='wp'?yuan(p)+' 元/间':p+' 元/㎡'}</span><b>${fmtWan(p*q)}</b>`;
+      }
+    }
+    if(it.qty){
+      const r=R.craft.find(x=>x.id===it.id);
+      document.querySelector(`[data-isub="${it.id}"]`).innerHTML = `工程量 ${Math.round(r.qty)} ${r.unit}<b>${fmtWan(r.amt)}</b>`;
+    } else document.querySelector(`[data-isub="${it.id}"]`).innerHTML='';
+  }
+  // 标准项
+  document.getElementById('fixed-sum').textContent = fmtWan(R.fixedSum);
+  document.getElementById('fixed-body').innerHTML = R.fixedRows.map(r=>`<tr><td>${r.name}</td><td class="r num">${r.qty%1?r.qty.toFixed(0):r.qty} ${r.unit}</td><td class="r num">${r.price}</td><td class="r num">${yuan(r.amt)}</td></tr>`).join('')
+    + `<tr><td colspan="3">工程管理费 ${COEF.mgmt}% + 清运运输保护放样等 ${COEF.misc}%（按全部施工直接费）</td><td class="r num">${yuan(R.mgmt+R.misc)}</td></tr>`;
+
+  // 主材价格
+  for(const it of MAT){
+    for(const o of it.options){
+      const el=document.querySelector(`[data-mp="${it.id}:${o.id}"]`);
+      const v=o.calc(c);
+      el.innerHTML = `<span>${o.est?`估算<span class="est" title="${esc(o.est)}">示意价</span>`:'您家约'}</span><b>${o.id==='none'||(o.tier===0&&v===0)?'—':fmtWan(v)}</b>`;
+    }
+    const m=R.mats.find(x=>x.id===it.id);
+    document.querySelector(`[data-msub="${it.id}"]`).innerHTML = m.amt?`已选<b>${fmtWan(m.amt)}</b>`:'';
+  }
+
+  // 汇总
+  const b=COEF.band/100, lo=R.total*(1-b), hi=R.total*(1+b);
+  const rangeTxt = `${wan(lo)}–${wan(hi)}<small> 万</small>`;
+  document.getElementById('sum-range').innerHTML = rangeTxt;
+  document.getElementById('m-range').textContent = `${wan(lo)}–${wan(hi)} 万`;
+  document.getElementById('sum-m2').textContent = `折合约 ${yuan(R.total/c.A)} 元/㎡ · 其中施工约 ${yuan(R.base/c.A)} 元/㎡`;
+  document.getElementById('sum-kv').innerHTML = `
+    <span class="k">基础施工</span><span class="v">${fmtWan(R.base)}</span>
+    <span class="k">主材设备软装</span><span class="v">${fmtWan(R.matSum)}</span>
+    <span class="k tot">合计（中值）</span><span class="v tot">${fmtWan(R.total)}</span>`;
+
+  const groups = [['施工',R.base]];
+  const gm={}; for(const m of R.mats){ gm[m.group]=(gm[m.group]||0)+m.amt; }
+  for(const g of ['冷暖','智能','门窗','主材','定制','软装']) groups.push([g,gm[g]||0]);
+  const mx=Math.max(...groups.map(g=>g[1]));
+  document.getElementById('sum-bars').innerHTML = groups.map(([g,v])=>`<div class="bar"><span>${g}</span><div class="track"><div class="fill" style="width:${mx?v/mx*100:0}%"></div></div><span class="v">${fmtWan(v)}</span></div>`).join('');
+
+  const lv=tierLevel(R.tierIdx);
+  document.getElementById('tier-name').textContent = tierName(R.tierIdx);
+  document.querySelectorAll('#meter div').forEach((d,i)=>{ d.className = (i<lv?'on ':'')+'t'+lv; });
+
+  // 顾问判断
+  const m2=R.total/c.A;
+  let cls, head;
+  if(m2>=COEF.coreM2){cls='核心客户';head='预算与云境的定位匹配，可以重点跟进。';}
+  else if(m2>=COEF.potM2){cls='可争取客户';head='预算接近，重点讲清楚升级项的价值。';}
+  else {cls='非目标客户';head='当前选择低于公司主力区间，注意投入的时间成本。';}
+  const tags=[];
+  if(S.sel.ceilShape==='yx') tags.push('有异形造型意向：讲点云扫描、工厂预制和异形案例');
+  const tierOf=(id,k)=>{const it=MAT.find(x=>x.id===id); const o=it.options.find(x=>x.id===S.sel[k]); return o?o.tier:0;};
+  if(tierOf('hvac','hvac')>=3||tierOf('fresh','fresh')>=3||tierOf('water','water_m')>=3) tags.push('重视健康舒适系统：设备方案可以做深');
+  if(tierOf('smart','smart')>=3) tags.push('对灯光与智能要求高：联动讲灯光设计');
+  if(tierOf('wood','wood')>=3) tags.push('木作选到高端整木：高价值客户');
+  if(S.sel.water==='ppr'&&S.sel.ceilBoard==='lafarge'&&S.sel.paint==='white') tags.push('工艺全选基础项：对隐蔽工程价值认知不足，可以用对比样板讲解');
+  const woodShare = (R.mats.find(m=>m.id==='wood').amt)/R.total;
+  if(woodShare>0.4) tags.push(`木作占全案 ${Math.round(woodShare*100)}%：确认客户是否清楚这部分预算`);
+  document.getElementById('verdict').innerHTML = `<div class="p-lab">客户判断</div><h4>${cls}</h4><div style="font-size:13px">${head}</div>${tags.length?`<ul>${tags.map(t=>`<li>${t}</li>`).join('')}</ul>`:''}`;
+
+  // 系数输入
+  document.querySelectorAll('[data-coef]').forEach(i=>{ if(document.activeElement!==i) i.value=COEF[i.dataset.coef]; });
+
+  window.__R=R; save();
+}
+
+/* ============ 小结 ============ */
+function summaryText(){
+  const R=compute(), c=R.c, b=COEF.band/100;
+  const tn={flat:'平层',duplex:'复式',villa:'别墅'}[S.type];
+  const L=[];
+  L.push(`【云境大宅 · 全案估算小结】`);
+  L.push(`房屋：${c.A}㎡ ${tn}${S.type==='villa'?' '+c.floors+'层':''}，${S.old?'旧房翻新':'毛坯/新房'}，${S.baths}个卫生间`);
+  L.push(`全案估算：${wan(R.total*(1-b))}–${wan(R.total*(1+b))} 万（约 ${yuan(R.total/c.A)} 元/㎡），整体档位：${tierName(R.tierIdx)}`);
+  L.push(``);
+  L.push(`一、施工工艺（约 ${fmtWan(R.base)}）`);
+  for(const it of CRAFT){ const o=it.options.find(x=>x.id===S.sel[selKey(it.id)]); L.push(`· ${it.title}：${o.name}`); }
+  L.push(``);
+  L.push(`二、主材设备软装（约 ${fmtWan(R.matSum)}）`);
+  for(const m of R.mats){ L.push(`· ${m.title}：${m.opt.id==='none'?'暂不考虑':(m.opt.brands?m.opt.brands+' ':'')+m.opt.name}${m.amt?'，约 '+fmtWan(m.amt):''}`); }
+  L.push(``);
+  L.push(`说明：以上为初次洽谈估算，不含税、设计费及物业收费，最终以正式预算为准。`);
+  return L.join('\n');
+}
+
+/* ============ 事件 ============ */
+document.addEventListener('click',e=>{
+  const o=e.target.closest('.opt'); if(o){ S.sel[o.dataset.k]=o.dataset.v; update(); return; }
+  const t=e.target.closest('[data-type]'); if(t){ S.type=t.dataset.type; update(); return; }
+  const od=e.target.closest('[data-old]'); if(od){ S.old=od.dataset.old==='1'; update(); return; }
+  const st=e.target.closest('[data-step]'); if(st){ const [k,d]=st.dataset.step.split(':');
+    if(k==='baths') S.baths=Math.min(10,Math.max(1,S.baths+ +d));
+    if(k==='floors') S.floors=Math.min(6,Math.max(2,S.floors+ +d));
+    update(); return; }
+});
+const areaIn=document.getElementById('area');
+areaIn.addEventListener('input',()=>{ const v=parseFloat(areaIn.value); if(v>=40&&v<=1500){ S.A=v; update(); } });
+areaIn.addEventListener('blur',()=>{ areaIn.value=S.A; });
+document.getElementById('area-range').addEventListener('input',e=>{ S.A=+e.target.value; update(); });
+document.getElementById('coef').addEventListener('input',e=>{ const k=e.target.dataset.coef; const v=parseFloat(e.target.value); if(k&&isFinite(v)){ COEF[k]=v; update(); } });
+document.getElementById('coef-reset').addEventListener('click',()=>{ for(const k in COEF_DEF) COEF[k]=COEF_DEF[k].v; update(); });
+
+function setView(adv){
+  advisor=adv; document.body.classList.toggle('advisor',adv);
+  document.getElementById('v-client').setAttribute('aria-pressed',!adv);
+  document.getElementById('v-adv').setAttribute('aria-pressed',adv);
+  try{ localStorage.setItem(KEY+'-view',adv?'adv':'client'); }catch(e){}
+}
+document.getElementById('v-client').addEventListener('click',()=>setView(false));
+document.getElementById('v-adv').addEventListener('click',()=>setView(true));
+document.getElementById('m-go').addEventListener('click',()=>document.getElementById('summary').scrollIntoView({behavior:'smooth'}));
+
+document.getElementById('copy').addEventListener('click',()=>{
+  const txt=summaryText(), ok=document.getElementById('copied'), fb=document.getElementById('copyfall');
+  const done=()=>{ ok.hidden=false; setTimeout(()=>ok.hidden=true,1800); };
+  const fallback=()=>{ fb.value=txt; fb.hidden=false; fb.focus(); fb.select(); };
+  try{ navigator.clipboard.writeText(txt).then(done,fallback); }catch(e){ fallback(); }
+});
+
+// 连点标题 5 次出现顾问口令框
+let taps=0, tapT=null;
+document.getElementById('logo').addEventListener('click',()=>{
+  taps++; clearTimeout(tapT); tapT=setTimeout(()=>taps=0,2000);
+  if(taps>=5 && !unlocked){ taps=0; document.getElementById('unlock').hidden=false; document.getElementById('code').focus(); }
+});
+function tryCode(){
+  const v=document.getElementById('code').value.trim();
+  if(v===ADV_CODE){ unlocked=true; try{localStorage.setItem(KEY+'-unlock','1');}catch(e){}
+    document.getElementById('unlock').hidden=true; document.getElementById('seg').hidden=false; setView(true); }
+  else document.getElementById('code-err').hidden=false;
+}
+document.getElementById('code-ok').addEventListener('click',tryCode);
+document.getElementById('code').addEventListener('keydown',e=>{ if(e.key==='Enter') tryCode(); });
+document.getElementById('v-lock').addEventListener('click',()=>{ unlocked=false; try{localStorage.removeItem(KEY+'-unlock');}catch(e){} setView(false); document.getElementById('seg').hidden=true; });
+document.getElementById('seg').hidden=!unlocked;
+renderStatic(); setView(advisor); update();
+</script>
+
+</body>
+</html>
